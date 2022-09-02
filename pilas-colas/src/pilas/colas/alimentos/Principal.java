@@ -23,11 +23,11 @@ public class Principal {
         cola.mostrar();
 
         // a
-        //ordenar_a(cola);
-        //cola.mostrar();
+        ordenar_a(cola);
+        cola.mostrar();
         // b
-        //ordenar_d(cola);
-        //cola.mostrar();
+        ordenar_d(cola);
+        cola.mostrar();
         // c
         mayor_precio(cola);
     }
