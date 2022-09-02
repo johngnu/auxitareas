@@ -71,7 +71,6 @@ public class ColaSZ {
             System.out.println("");
             while (!aux.esvacia()) {
                 elem = aux.eliminar();
-
                 adicionar(elem);
             }
         }

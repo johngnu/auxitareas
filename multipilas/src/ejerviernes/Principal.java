@@ -47,12 +47,14 @@ public class Principal {
         if (Z.esvacia()) {
             System.out.println("Cola vacia");
         } else {
-            System.out.println("Datos de la Cola ");
             ColaSZ aux = new ColaSZ();
             while (!Z.esvacia()) {
                 elem = Z.eliminar();
                 aux.adicionar(elem);
-                elem.mostrar();
+                if(elem.getNombre().equals(nombre)) {
+                    System.out.println("Instituciones de la zona: " + elem.getNombre());
+                    elem.getC().mostrar();
+                }
             }
             System.out.println("");
             while (!aux.esvacia()) {
