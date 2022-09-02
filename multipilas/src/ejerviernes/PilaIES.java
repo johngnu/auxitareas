@@ -2,7 +2,7 @@ package ejerviernes;
 
 /**
  *
- * @author desktop
+ * @author helen castillo
  */
 public class PilaIES {
      private int max=100;

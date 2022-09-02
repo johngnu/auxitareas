@@ -2,7 +2,7 @@ package ejerviernes;
 
 /**
  *
- * @author estudiante
+ * @author helen castillo
  */
 public class Zona {
 

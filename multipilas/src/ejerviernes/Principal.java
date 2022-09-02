@@ -38,6 +38,27 @@ public class Principal {
         Z.adicionar(z3);
         Z.mostrar();
 
+        // 5
+        mostrar(Z, "Calacoto");
     }
 
+    public static void mostrar(ColaSZ Z, String nombre) {
+        Zona elem = null;
+        if (Z.esvacia()) {
+            System.out.println("Cola vacia");
+        } else {
+            System.out.println("Datos de la Cola ");
+            ColaSZ aux = new ColaSZ();
+            while (!Z.esvacia()) {
+                elem = Z.eliminar();
+                aux.adicionar(elem);
+                elem.mostrar();
+            }
+            System.out.println("");
+            while (!aux.esvacia()) {
+                elem = aux.eliminar();
+                Z.adicionar(elem);
+            }
+        }
+    }
 }
