@@ -7,29 +7,37 @@ package pilas.colas.libro;
 public class Principal {
 
     public static void main(String[] args) {
-        Libro l1 = new Libro("Percy Jackson", "Rick riorda", 320);
-        Libro l2 = new Libro("Jarry Poter", "J. Rowlin", 90);
+        Libro l1 = new Libro("Percy Jackson", "Rick Riordan", 320);
+        Libro l2 = new Libro("Harry Poter", "J.K Rowling", 90);
         Libro l3 = new Libro("Metamorfosis", "Kafka", 120);
-        Libro l4 = new Libro("El tunel", "Ernesto Sabato", 95);
+        Libro l4 = new Libro("El Tunel", "Ernesto Sabato", 95);
 
         Libro l5 = new Libro("aaa", "bbbb", 20);
-        Libro l6 = new Libro("bbb", "ssss", 20);
+        //Libro l6 = new Libro("bbb", "ssss", 20);
 
         PilaLibro pila = new PilaLibro();
         pila.adicionar(l1);
         pila.adicionar(l2);
         pila.adicionar(l3);
         pila.adicionar(l4);
+        pila.adicionar(l5);
 
         pila.mostrar();
 
         // a
-        eliminar_k(pila, 3);
-        //pila.mostrar();
+        System.out.println("\neliminar k=5");
+        eliminar_k(pila, 5);
+        pila.mostrar();
 
         // b
+        System.out.println("\ninsertar nuevos despues de paginas < 100");
         insertar(pila);
         pila.mostrar();
+        
+        // c
+        System.out.println("\nverificar autor yyy");
+        verificar(pila, "yyy");
+        
     }
 
     public static void eliminar_k(PilaLibro pila, int k) {
