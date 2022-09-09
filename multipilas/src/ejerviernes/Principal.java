@@ -77,7 +77,7 @@ public class Principal {
                 elem = A.eliminar();
                 aux.adicionar(elem);
                 if (nombre.equals(elem.getNombre())) {
-                    
+                    // falta
                 }
             }
             while (!aux.esvacia()) {

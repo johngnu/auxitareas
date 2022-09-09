@@ -9,11 +9,13 @@ public class IEducSup {
     private String nombre, direccion;
     private int telefono;
 
-    IEducSup(String a, String b, int c) {
-        nombre = a;
-        direccion = b;
-        telefono = c;
+    public IEducSup(String nombre, String direccion, int telefono) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
     }
+
+    
 
     IEducSup() {
         nombre = " ";
