@@ -24,7 +24,8 @@ public class Principal {
         // mostrar el stack
         //mostrar(obras);
         
-        Autor a1 = new Autor("13342538", "helen", "av. trigales", obras);
+        Autor a1 = new Autor("13342538", "helen", "av. trigales", "boliviana", obras);
+        Autor a2 = new Autor("13342538", "helen", "av. trigales", "boliviana", obras);
                 
         //ColaAutores ca = new ColaAutores();
         //ca.adicionar(a1);

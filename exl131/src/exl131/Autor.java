@@ -9,16 +9,17 @@ public class Autor {
     private String dirAut;
     private String nacionalidad;
     private Stack<Obra> obras;
-    
-    public Autor(String ci, String nomAut, String dirAut, Stack<Obra> obras) {
+
+    public Autor(String ci, String nomAut, String dirAut, String nacionalidad, Stack<Obra> obras) {
         this.ci = ci;
         this.nomAut = nomAut;
         this.dirAut = dirAut;
+        this.nacionalidad = nacionalidad;
         this.obras = obras;
-    }
+    }        
     
     public void mostrar() {
-        System.out.println("ci: " + ci + " nombre: " + nomAut + " nacionalidad" + nacionalidad);
+        System.out.println("ci: " + ci + " nombre: " + nomAut + " nacionalidad: " + nacionalidad);
         mostrar(obras);
     }
     
