@@ -25,7 +25,7 @@ public class Principal {
         //mostrar(obras);
         
         Autor a1 = new Autor("13342538", "helen", "av. trigales", "boliviana", obras);
-        Autor a2 = new Autor("13342538", "helen", "av. trigales", "boliviana", obras);
+        Autor a2 = new Autor("123", "autor2", "lomas cabas", "estranjero", obras);
                 
         //ColaAutores ca = new ColaAutores();
         //ca.adicionar(a1);
