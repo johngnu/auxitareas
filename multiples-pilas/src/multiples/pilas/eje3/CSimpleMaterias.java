@@ -100,7 +100,6 @@ public class CSimpleMaterias {
         PilaProyectos proy1 = new PilaProyectos();
         proy1.adicionar(new Proyecto("Diagramas", p1));
         proy1.adicionar(new Proyecto("Teoria", p2));
-
         adicionar(new Materia("INF-111", proy1));
 
         CCircularParticipantes p3 = new CCircularParticipantes();
@@ -108,10 +107,9 @@ public class CSimpleMaterias {
         p3.adicionar(new Participante("Alyn"));
         p3.adicionar(new Participante("Grover"));
         p3.adicionar(new Participante("Belen"));
+        
         PilaProyectos proy2 = new PilaProyectos();
-
         proy2.adicionar(new Proyecto("Algoritmos", p3));
-
         adicionar(new Materia("INF-143", proy2));
     }
 

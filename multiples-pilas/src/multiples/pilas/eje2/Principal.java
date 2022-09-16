@@ -15,12 +15,30 @@ public class Principal {
         SolucionB(p, 3);
         p.mostrar();
         //c. Cuantas palabras tienen 2 vocales
-        SolucionC(p);
+        //SolucionC(p);
 
+        SolucionD(p);
         //d. Mostrar las palabras palindromas
         // RESOLVER: 0.5 pts sobre auxiliatura (PARTICIPACION) presentacion en plataforma
     }
 
+    private static void SolucionD(MultiPilaLetra p) {
+        for (int i = 1; i <= p.getNc(); i++) {
+            PilaLetra aux = new PilaLetra();
+            String w = "";
+            while (!p.esvacia(i)) {
+                String y = p.eliminar(i);
+                w = w + y;
+                aux.adicionar(y);
+            }
+            p.vaciar(i, aux);
+            StringBuilder strb = new StringBuilder(w);		 
+            if (w.equals(strb.reverse().toString())) {
+                System.out.println(w + " esta palabra es palindroma");
+            }
+        }
+    }
+    
     private static void SolucionC(MultiPilaLetra p) {
         int contPrincipal = 0;
         for (int i = 1; i <= p.getNc(); i++) {

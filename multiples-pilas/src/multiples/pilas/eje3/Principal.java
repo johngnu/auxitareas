@@ -14,11 +14,12 @@ public class Principal {
         //   proyecto que tengan 3 participantes
         //		SolucionB(m);
         //c. Verificar si la en la materia X se encuentra el Participante Y
-        SolucionC(m, "INF-111", "Alan");
+        //SolucionC(m, "INF-111", "Alan");
 
         //d. De las materias que tengan X numero de participantes,
         //   mostrar la materia y eliminar a los ultimo participantes de cada proyecto
         // RESOLVER: 0.5 pts sobre auxiliatura (PARTICIPACION) presentacion en plataforma
+        //SolucionC(m, "INF-111", "Alan");
     }
 
     private static void SolucionC(CSimpleMaterias m, String mat, String part) {
