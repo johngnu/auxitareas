@@ -22,7 +22,19 @@ public class Principal {
         obras.add(o3);
         
         // mostrar el stack
-        mostrar(obras);
+        //mostrar(obras);
+        
+        Autor a1 = new Autor("13342538", "helen", "av. trigales", obras);
+                
+        //ColaAutores ca = new ColaAutores();
+        //ca.adicionar(a1);
+        
+        MultiCola_Autores mca = new MultiCola_Autores();
+        mca.setN(1);
+        
+        mca.adicionar(1, a1);
+        
+        mca.mostrar();
     }
 
     public static void mostrar(Stack<Obra> miStack) {
