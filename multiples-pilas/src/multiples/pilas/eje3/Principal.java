@@ -15,11 +15,41 @@ public class Principal {
         //		SolucionB(m);
         //c. Verificar si la en la materia X se encuentra el Participante Y
         //SolucionC(m, "INF-111", "Alan");
-
         //d. De las materias que tengan X numero de participantes,
         //   mostrar la materia y eliminar a los ultimo participantes de cada proyecto
         // RESOLVER: 0.5 pts sobre auxiliatura (PARTICIPACION) presentacion en plataforma
         //SolucionC(m, "INF-111", "Alan");
+        SolucionD(m, 4);
+
+        m.mostrar();
+    }
+
+    private static void SolucionD(CSimpleMaterias m, int xe) {
+        CSimpleMaterias caux = new CSimpleMaterias();
+        while (!m.esvacia()) {
+            Materia x = m.eliminar();
+            Proyecto pelem;
+            if (!x.getProy().esvacia()) {
+                PilaProyectos paux = new PilaProyectos();
+                while (!x.getProy().esvacia()) {
+                    pelem = x.getProy().eliminar();
+                    if (pelem.getP().nroelem() == xe) {
+                        System.out.println("*** Materia: " + x.getSigla());
+                        System.out.println("*** nparts.: " + pelem.getP().nroelem());
+                        CCircularParticipantes aux = new CCircularParticipantes();
+                        for (int i = 1; i < (pelem.getP().nroelem() - 1); i++) { // n participantes - 1
+                            Participante pr = pelem.getP().eliminar();
+                            aux.adicionar(pr);
+                        }
+                        //pelem.getP().vaciar(aux);
+                    }
+                    paux.adicionar(pelem);
+                }
+                x.getProy().vaciar(paux);
+            }
+            caux.adicionar(x);
+        }
+        m.vaciar(caux);
     }
 
     private static void SolucionC(CSimpleMaterias m, String mat, String part) {
