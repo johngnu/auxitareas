@@ -52,9 +52,9 @@ public class Salida {
 
     public void mostrar() {
         System.out.println("Salida [codDestino=" + codDestino + "]");
-        //cp.mostrar();
-        //c1.mostrar();
-        //c2.mostrar();
+        cp.mostrar();
+        c1.mostrar();
+        c2.mostrar();
     }
 
     public void leer() {

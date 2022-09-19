@@ -28,7 +28,7 @@ public class Main {
          */
         //
         SolucionC(d, s, "La Paz");
-
+        
         s.mostrar();
     }
 
@@ -67,19 +67,27 @@ public class Main {
             while (!d.esvacia()) {
                 elem = d.eliminar();
                 if (elem.getDestino().equals(dx)) {
+                    System.out.println("*********** Entro aqui con " + s.getN());
                     CSimpleS auxd = new CSimpleS();
+                    CSimpleS auxt;
                     for (int i = 1; i <= s.getN(); i++) {
-                        CSimpleS auxt = new CSimpleS();
-                        while (s.esvacia(i)) {
+                        auxt = new CSimpleS();
+                        while (!s.esvacia(i)) {
                             Salida sa = s.eliminar(i);
-                            /*if (sa.getCodDestino().equals(elem.getCodDestino())) {
+                            if (sa.getCodDestino().equals(elem.getCodDestino())) {
                                 auxd.adicionar(sa);
                             } else {
                                 auxt.adicionar(sa);
-                            }*/
+                            }
                         }
-                        //s.vaciar(i, auxt);
+                        s.vaciar(i, auxt);                        
                     }
+                    auxt = new CSimpleS();
+                    while (!s.esvacia(1)) {
+                        Salida sa = s.eliminar(1);
+                        auxt.adicionar(sa);
+                    }
+                    s.vaciar(1, auxd);
                 }
                 aux.adicionar(elem);
             }
